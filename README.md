@@ -60,7 +60,7 @@ Tokens 4 Breakfast keeps both numbers in your menu bar while you work: what your
 | **Claude Web** | Claude 5-hour, weekly, and per-model limits | Your claude.ai session, via a guided connect in Settings |
 | **Cursor** | Spend, projects, models, sessions | Local Cursor data. No key. |
 | **Codex** | Spend and plan limits | Local Codex CLI sessions. No key. |
-| **GitHub Copilot** | Subscription value and premium-request quota | Your local Copilot CLI login. No key. |
+| **GitHub Copilot** | Subscription value and monthly quota (AI credits or premium requests, as GitHub reports it) | Your local Copilot CLI login. No key. |
 | **Grok** | SuperGrok weekly limit | Your local Grok CLI login. No key. |
 | **Anthropic API** | Organization API spend | Anthropic Admin API key (organizations only) |
 | **OpenAI** | Organization API spend | OpenAI organization Admin API key |
@@ -113,8 +113,9 @@ See [SECURITY.md](SECURITY.md) for how to report a vulnerability.
 
 ## Recent releases
 
-The latest release is **2.0.16** (19 September 2026). Highlights from the 2.0 line:
+The latest release is **2.0.17** (4 October 2026). Highlights from the 2.0 line:
 
+- **2.0.17:** a pace marker on every 5-hour and weekly limit, a Codex credits watch, value per 1% of your limit (Pro), and Claude Opus 5.5 / Sonnet 5.5 and GPT-6.1 Sol priced.
 - **2.0.16:** GPT-6 and Claude Fable 5.1 priced; every model rate re-checked against the providers' official pricing pages.
 - **2.0.15:** extra metrics in the menu bar, weekly-limit alerts at 80/95/100%, and a selectable period for the popover's headline figure.
 - **2.0.14:** Focus sessions back in the popover, a burn-rate forecast per limit, and early-reset tracking.
