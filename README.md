@@ -13,7 +13,7 @@ Claude Code · Claude · Codex · Cursor · GitHub Copilot · OpenAI · Anthropi
 [![Download for macOS](https://img.shields.io/badge/Download%20for%20macOS-free-F59E0B?style=for-the-badge&logo=apple&logoColor=white)](https://www.tokens4breakfast.app/download?source=github_readme)
 [![Website](https://img.shields.io/badge/tokens4breakfast.app-website-2B2520?style=for-the-badge)](https://www.tokens4breakfast.app)
 
-![Version](https://img.shields.io/badge/version-2.0.17-F59E0B)
+![Version](https://img.shields.io/badge/version-2.0.19-F59E0B)
 ![macOS 14.6+](https://img.shields.io/badge/macOS-14.6%2B-000000?logo=apple&logoColor=white)
 ![Apple Silicon & Intel](https://img.shields.io/badge/Apple%20Silicon%20%26%20Intel-%E2%9C%93-555)
 ![Pro](https://img.shields.io/badge/Pro-%2414.99%20one--time-F59E0B)
@@ -62,7 +62,7 @@ Tokens 4 Breakfast keeps both numbers in your menu bar while you work: what your
 - **Limits before you hit them.** Claude 5-hour, weekly and per-model limits, Codex limits and the Grok weekly limit, each with a reset time and a burn-rate forecast. Claude limits alert you as you approach the cap, and a weekly cap pinned in the menu bar alerts at 80%, 95% and 100%.
 - **Usage in real money.** Claude Code and Codex usage is valued at each model's published API rate, including cache reads, cache writes and Claude fast mode, so a flat subscription still shows what the same tokens would have cost. Models without a public rate are marked unpriced, never guessed.
 - **Codex credits, watched.** The Codex section shows your credit balance the way Codex counts it, and tells you once when you reach your plan limit and further work starts drawing on credits.
-- **Subscription tracking.** Add Claude, ChatGPT, Cursor, Copilot, Gemini, Grok, Mistral and other plans, and see them next to your usage-based spend.
+- **Subscription tracking.** Add Claude, ChatGPT, Cursor, Copilot, Gemini, Grok, Mistral and other plans by hand, and see them next to your usage-based spend.
 - **Focus Mode.** Set a dollar budget for a work session and get warned at 80% and 100%.
 - **Your currency.** Show spend in EUR, GBP and more, at a conversion rate you set.
 - **Privacy Audit Log.** Every outbound request the app makes is logged in Settings, with host, reason and time.
@@ -79,7 +79,7 @@ A full dashboard for heavy users: **Limit Runway** (when you will hit each cap a
   <img src="docs/readme/value-per-percent.png" alt="The Value per 1% of your limit card: Codex weekly at $2.33 of work per 1%, 4.1 times less than last week; Claude weekly at $5.00 per 1%, about the same as last week" width="600">
 </p>
 
-**New in 2.0.17: what 1% of your limit buys.** How much work each 1% of your weekly Claude or Codex limit covers, compared with last week, so you can see when a limit tightens.
+**Since 2.0.17: what 1% of your limit buys.** How much work each 1% of your weekly Claude or Codex limit covers, compared with last week, so you can see when a limit tightens.
 
 Pro also adds per-provider daily and weekly **budgets** with alerts, **CSV export**, a weekly summary and the shareable **Token Card**.
 
@@ -109,7 +109,7 @@ Pro also adds per-provider daily and weekly **budgets** with alerts, **CSV expor
 | **Cursor** | Spend, projects, models, sessions | Local Cursor data. No key. |
 | **Codex** | Spend, plan limits and credits | Local Codex CLI sessions. No key. |
 | **GitHub Copilot** | Subscription value and monthly quota (AI credits or premium requests, as GitHub reports it) | Your local Copilot CLI login. No key. |
-| **Grok** | SuperGrok weekly limit | Your local Grok CLI login. No key. |
+| **Grok** | Grok weekly limit (SuperGrok or X Subscription) | Your local Grok CLI login. No key. |
 | **Anthropic API** | Organization API spend | Anthropic Admin API key (organizations only) |
 | **OpenAI** | Organization API spend | OpenAI organization Admin API key |
 | **Mistral** | Organization API spend | Mistral Enterprise Admin API key |
@@ -155,14 +155,26 @@ See [SECURITY.md](SECURITY.md) for how to report a vulnerability.
 2. Open the .zip and drag **Tokens 4 Breakfast** to `/Applications`.
 3. Launch it, click the menu bar icon, and connect a provider in Settings.
 
+**Or with Homebrew:**
+
+```sh
+brew tap onekapisch/tap
+brew trust onekapisch/tap
+brew install --cask onekapisch/tap/tokens-4-breakfast
+```
+
+Homebrew 7 and later only load casks from taps you have trusted, so `brew tap` and `brew trust` are needed once.
+
 **Updating:** built-in auto-update (Sparkle). The app tells you when a new version is ready to install.<br>
-**Uninstalling:** quit the app and move it to the Trash. Your data is in `~/Library/Application Support/Tokens4Breakfast`; saved keys are in your login Keychain under `com.onekapisch.tokensforbreakfast`.<br>
+**Uninstalling:** quit the app and move it to the Trash, or run `brew uninstall --zap --cask onekapisch/tap/tokens-4-breakfast` if you installed it with Homebrew. Your data is in `~/Library/Application Support/Tokens4Breakfast`; saved keys are in your login Keychain under `com.onekapisch.tokensforbreakfast`.<br>
 **Requirements:** macOS 14.6 Sonoma or later, Apple Silicon or Intel.
 
 ## Recent releases
 
 | Version | Highlights |
 |---|---|
+| **2.0.19** · 1 Nov 2026 | Claude Max and Ultra plan names, weekly-only limits on verified Ultra accounts, Max and Ultra API credits shown but not counted, X Subscription plans for Grok and Cursor, and GPT-6.1 Terra priced |
+| **2.0.18** · 23 Oct 2026 | Sharper pace marker with overshoot and headroom shading, clearer OpenRouter connection errors, safer Keychain reads, and Claude Haiku 5.5 priced |
 | **2.0.17** · 4 Oct 2026 | Pace marker on every 5-hour and weekly limit, Codex credits watch, value per 1% of your limit (Pro), and Claude Opus 5.5 / Sonnet 5.5 and GPT-6.1 Sol priced |
 | **2.0.16** · 19 Sep 2026 | GPT-6 and Claude Fable 5.1 priced; every model rate re-checked against the providers' official pricing pages |
 | **2.0.15** · 18 Sep 2026 | Extra metrics in the menu bar, weekly-limit alerts at 80/95/100%, and a selectable period for the popover's headline figure |
